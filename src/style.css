@@ -6,7 +6,9 @@ body{
     
  
 }
-
+.container{
+    padding: 0px 100px;
+}
 .footer
 {
     background-color: rgb(48, 48, 48);
@@ -26,4 +28,19 @@ body{
     .navCont{
         padding: 0px 20px
     }
+ }
+
+
+ #hero{
+   background:url(../assets/hero.png)top right/cover no-repeat fixed;
+    height: 400px;
+    background-repeat: no-repeat;
+
+ }
+
+ .search
+ {
+    width: 80%;
+    border-radius: 10px;
+    padding-top: 100px;
  }
