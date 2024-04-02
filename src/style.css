@@ -44,3 +44,19 @@ body{
     border-radius: 10px;
     padding-top: 100px;
  }
+
+ .featImg{
+    height: 250px;
+ }
+
+ .featInfo
+ {
+    font-size: 14px;
+ }
+
+ .propType
+ {
+font-size: 13px;
+background-color: #D9D9D9;
+
+ }
