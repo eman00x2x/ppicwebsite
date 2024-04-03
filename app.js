@@ -4,6 +4,4 @@ $(document).ready(function(){
     $('#Footer').load("./components/footer.html");
     $('#Hero').load("./pages/homepage/header.html");
  
- 
- 
  });
