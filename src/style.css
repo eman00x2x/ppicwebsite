@@ -1,62 +1,109 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
     font-family: "Montserrat", sans-serif;
-    
- 
-}
-/* .container{
-    padding: 0px 100px;
-} */
-.footer
-{
-    background-color: rgb(48, 48, 48);
-    color: white;
-    padding: 50px 100px;
-    font-size: 12px;
-    height: 250px;
 }
 
-.navCont{
+
+
+.navCont {
     padding: 0px 100px
 }
 
-
-@media (max-width: 575.98px) { 
-
-    .navCont{
-        padding: 0px 20px
-    }
- }
-
-
- #hero{
-   background:url(../assets/hero.png)top right/cover no-repeat fixed;
-    height: 400px;
+#hero {
+    background: url(../assets/img/hero.png)top right/cover no-repeat fixed;
+    height: 70vh;
     background-repeat: no-repeat;
 
- }
+}
 
- .search
- {
-    width: 80%;
+.search {
+    width: 60%;
     border-radius: 10px;
     padding-top: 100px;
- }
+}
 
- .featImg{
+
+
+.featImg {
     height: 250px;
- }
+}
 
- .featInfo
- {
+.featInfo {
     font-size: 14px;
- }
+}
 
- .propType
- {
-font-size: 13px;
-background-color: #D9D9D9;
+.propType {
+    font-size: 13px;
+    background-color: #D9D9D9;
 
- }
+}
+.caroProp
+{
+    display: none;
+}
+.partImg
+{
+    width: 200px;
+}
+
+.articles
+{
+    font-family: "Montserrat", sans-serif;
+
+}
+
+@media (max-width: 575.98px) {
+
+    .navCont {
+        padding: 0px 20px
+    }
+    .footer{
+        padding: 30px 20px;
+    }
+    .search
+    {
+        width: 100%;
+    }
+    #searchTitle h2{
+        font-size:24px;
+        text-align:center;
+    }
+    .searchFilter
+    {
+        font-size:8px;
+    }
+    .container-search{
+        padding: 0px 20px;
+    }
+    .container
+    {
+        padding: 0px 20px;
+
+    }
+    #propGroup
+    {
+        display: none;
+    }
+    .caroProp
+    {
+        display: block;
+    }
+    .partImg{
+        width: 120px;
+    }
+ 
+ 
+
+    
+
+}
+
+@media (max-width: 767.98px) {
+
+    .searchFilter
+    {
+        font-size:8px;
+    }
+
+}
