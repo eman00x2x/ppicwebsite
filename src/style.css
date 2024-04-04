@@ -53,6 +53,10 @@ body {
     font-family: "Montserrat", sans-serif;
 
 }
+#getImg
+{
+    margin-bottom: -80px;
+}
 
 @media (max-width: 575.98px) {
 
@@ -93,9 +97,28 @@ body {
     .partImg{
         width: 120px;
     }
- 
- 
+    #getImg
+    {
+        width: 150px;
+        margin-bottom: 0px;
+    }
+    .getTitle
+    {
+        font-size: 24px;
+    }
+    .careerCard
+    {
+        order: 2;
+    }
+    .careerImg
+    {
+        width: 2000px;
+    }
 
+    #knowImg
+    {
+        width: 10px;
+    }
     
 
 }
