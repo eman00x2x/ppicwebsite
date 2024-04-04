@@ -2,7 +2,7 @@
 function createCard(thumbnail, title, desc, videoLink) {
 
     const column = $('<div>').addClass('col-lg-4');
-    const card = $('<div>').addClass('card').addClass('h-auto').addClass('w-100').addClass('col-lg-4').addClass('shadow').addClass('shadow-lg');
+    const card = $('<div>').addClass('card').addClass('h-100').addClass('w-100').addClass('col-lg-4').addClass('shadow').addClass('shadow-lg');
     const thumbnailImg = $('<img>').attr('src', thumbnail).attr('alt', 'Thumbnail').attr('type', 'button').attr('data-bs-toggle', 'modal')
         .attr('data-bs-target', '#exampleModal').attr('class', 'btn').click(function () {
             $('#videoFrame').attr('src', videoLink);
