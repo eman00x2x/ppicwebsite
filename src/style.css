@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+
+.navCont {
+    padding: 0px 100px
+}
+
+#hero {
+    background: url(../assets/img/hero.png)top right/cover no-repeat fixed;
+    height: 70vh;
+    background-repeat: no-repeat;
+
+}
+
+.search {
+    width: 60%;
+    border-radius: 10px;
+    padding-top: 100px;
+}
+
+
+
+.featImg {
+    height: 250px;
+}
+
+.featInfo {
+    font-size: 14px;
+}
+
+.propType {
+    font-size: 13px;
+    background-color: #D9D9D9;
+
+}
+.caroProp
+{
+    display: none;
+}
+.partImg
+{
+    width: 200px;
+}
+
+.articles
+{
+    font-family: "Montserrat", sans-serif;
+
+}
+#getImg
+{
+    margin-bottom: -80px;
+}
+
+@media (max-width: 575.98px) {
+
+    .navCont {
+        padding: 0px 20px
+    }
+    .footer{
+        padding: 30px 20px;
+    }
+    .search
+    {
+        width: 100%;
+    }
+    #searchTitle h2{
+        font-size:24px;
+        text-align:center;
+    }
+    .searchFilter
+    {
+        font-size:8px;
+    }
+    .container-search{
+        padding: 0px 20px;
+    }
+    .container
+    {
+        padding: 0px 20px;
+
+    }
+    #propGroup
+    {
+        display: none;
+    }
+    .caroProp
+    {
+        display: block;
+    }
+    .partImg{
+        width: 120px;
+    }
+    #getImg
+    {
+        width: 150px;
+        margin-bottom: 0px;
+    }
+    .getTitle
+    {
+        font-size: 24px;
+    }
+    .careerCard
+    {
+        order: 2;
+    }
+    .careerImg
+    {
+        width: 2000px;
+    }
+
+    #knowImg
+    {
+        width: 10px;
+    }
+    
+
+}
+
+@media (max-width: 767.98px) {
+
+    .searchFilter
+    {
+        font-size:8px;
+    }
+
+    #hero
+    {
+        height: 60vh;
+    }
+
+    .search
+    {
+        width: 100%;
+        
+    }
+
+  
+}
