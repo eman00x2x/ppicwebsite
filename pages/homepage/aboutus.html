@@ -17,6 +17,17 @@
         .hidden {
             display: none;
         }
+        .btn{
+
+        }
+        .btn .active {
+            /* display: none; */
+            color: white; 
+            background-color: #131C39; 
+            border-radius: 20px;
+            height: 45px; 
+            width: 170px;
+        }
     </style>
 </head>
 
@@ -25,12 +36,12 @@
         <div id="NavBar"></div>
     </nav>
     <section>
-        <div class="container1">
+        <div class="container1" >
             <h1 class="text-start fw-bold" style="padding-left: 100px; padding-bottom: 30px; padding-top: 7rem;">About Philproperties International Corporation</h1>
         </div>
-        <div class="container2" style="padding-left: 100px;">
-            <button style="color: white; background-color: #131C39; border-radius: 20px; height: 45px; width: 170px;" onclick="showDiv('div1')"> Get to Know Us</button>
-            <button style="color: #fff; background-color: #131C39; border-radius: 20px; height: 45px; width: 170px;" onclick="showDiv('div2')">Mission & Vision</button>
+        <div class="container2" style="padding-left: 100px;" id="container2">
+            <button class="btn"  onclick="showDiv('div1')"> Get to Know Us</button>
+            <button class="btn"  onclick="showDiv('div2')">Mission & Vision</button>
         </div>
     </section>
     <div id="div1" class="content-div">
@@ -91,6 +102,19 @@
 
     <script>
         function showDiv(divId) {
+
+            var btnContainer = document.getElementById("container2");
+
+            var btns = btnContainer.getElementsByClassName("btn");
+
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+                }
+
             // Hide all divs
             var divs = document.querySelectorAll('.content-div');
             for (var i = 0; i < divs.length; i++) {
