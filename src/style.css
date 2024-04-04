@@ -130,4 +130,16 @@ body {
         font-size:8px;
     }
 
+    #hero
+    {
+        height: 60vh;
+    }
+
+    .search
+    {
+        width: 100%;
+        
+    }
+
+  
 }
