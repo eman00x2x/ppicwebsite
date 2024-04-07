@@ -57,6 +57,7 @@ body {
     margin-bottom: -80px;
 }
 
+
 @media (max-width: 575.98px) {
 
     .navCont {
@@ -118,7 +119,10 @@ body {
     {
         width: 10px;
     }
-    
+    .filter {
+        position: relative; /* Change to relative on mobile screens */
+        top: 0; /* Reset the top position */
+    }
 
 }
 
