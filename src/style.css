@@ -57,6 +57,7 @@ body {
     margin-bottom: -80px;
 }
 
+
 @media (max-width: 575.98px) {
 
     .navCont {
@@ -75,7 +76,7 @@ body {
     }
     .searchFilter
     {
-        font-size:8px;
+        font-size:80px;
     }
     .container-search{
         padding: 0px 20px;
@@ -118,8 +119,15 @@ body {
     {
         width: 10px;
     }
-    
-
+    .filter {
+        position: relative; /* Change to relative on mobile screens */
+        top: 0; /* Reset the top position */
+    }
+    #videoFrame
+    {
+        height: 400px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 767.98px) {
