@@ -1,38 +1,4 @@
 
-function createCard(thumbnail,type,prices, title, desc, propInfo) {
-
-
-    const column = $('<div>').addClass('col-lg-3').addClass('col-sm-6').addClass('pt-1');
-    const card = $('<div>').addClass('card').addClass('h-100').addClass('w-100').addClass('col-lg-4').addClass('shadow').addClass('shadow-lg');
-    const thumbnailImg = $('<img>').attr('src', thumbnail).addClass('card-img-top').addClass('featImg');
-    const cardbody = $('<div>').addClass('card-body');
-    const typeProp = $('<p>').addClass('propType').addClass('fw-semibold').addClass('w-75').addClass('text-center')
-    .addClass('rounded').text(type);
-    const priceProp = $('<h5>').addClass('card-title').addClass('fw-bold').text(prices);
-    const titleProp = $('<p>').addClass('card-text').addClass('fw-semibold').addClass('featInfo').text(title);
-    const addProp = $('<p>').attr('style','font-size: 13px').text(desc);
-
-    const cardfoot = $('<div>').addClass('card-footer');
-    
-    const propInfoDiv = $('<div>').addClass('propInfo').addClass('d-flex').addClass('gap-1').addClass('flex-wrap');
-    for (const key in propInfo) {
-        if (propInfo.hasOwnProperty(key)) {
-            const value = propInfo[key];
-            const propDiv = $('<div>').attr('id', key).html(`<i class="fa-solid fa-${key}"></i> <span style="font-size:14px">${value}</span>`);
-            propInfoDiv.append(propDiv);
-        }
-    }
-    cardfoot.append(propInfoDiv);
-    cardbody.append(typeProp,priceProp,titleProp,addProp);
-    card.append(thumbnailImg,cardbody,cardfoot);
-
-    column.append(card);
-
-    $('#prop-container').append(column)
-}
-
-
-
 $(document).ready(function () {
 
     const thumbnails = ['/assets/img/properties/4.jpg',
@@ -118,10 +84,46 @@ $(document).ready(function () {
        
     ];
     
+    const listingIds = [];
 
+    function createCard(thumbnail,type,prices, title, desc, propInfo,id) {
+
+
+        const column = $('<div>').addClass('col-lg-3').addClass('col-sm-6').addClass('pt-1');
+        const card = $('<div>').addClass('card').addClass('h-100').addClass('w-100').addClass('col-lg-4').addClass('shadow').attr('type', 'button').addClass('shadow-lg');
+        const thumbnailImg = $('<img>').attr('src', thumbnail).addClass('card-img-top').addClass('featImg');
+        const cardbody = $('<div>').addClass('card-body');
+        const typeProp = $('<p>').addClass('propType').addClass('fw-semibold').addClass('w-75').addClass('text-center')
+        .addClass('rounded').text(type);
+        const priceProp = $('<h5>').addClass('card-title').addClass('fw-bold').text(prices);
+        const titleProp = $('<a>').attr('href','#').addClass('stretched-link').addClass('text-decoration-none').addClass('text-dark').addClass('card-text').addClass('fw-semibold').addClass('featInfo').text(title);
+        const addProp = $('<p>').attr('style','font-size: 13px').text(desc);
+    
+        const cardfoot = $('<div>').addClass('card-footer');
+        
+        const propInfoDiv = $('<div>').addClass('propInfo').addClass('d-flex').addClass('gap-1').addClass('flex-wrap');
+        for (const key in propInfo) {
+            if (propInfo.hasOwnProperty(key)) {
+                const value = propInfo[key];
+                const propDiv = $('<div>').attr('id', key).html(`<i class="fa-solid fa-${key}"></i> <span style="font-size:14px">${value}</span>`);
+                propInfoDiv.append(propDiv);
+            }
+        }
+        cardfoot.append(propInfoDiv);
+        cardbody.append(typeProp,priceProp,titleProp,addProp);
+        card.append(thumbnailImg,cardbody,cardfoot);
+    
+        column.append(card);
+    
+        $('#prop-container').append(column)
+        listingIds.push(id);
+
+    
+    }
 
     for (let i = 0; i < thumbnails.length; i++) {
-        createCard(thumbnails[i], types[i],prices[i],titles[i], descs[i],propertyData[i]);
+        const id = i + 1;
+        createCard(thumbnails[i], types[i],prices[i],titles[i], descs[i],propertyData[i],id);
     }
 
 
@@ -162,4 +164,8 @@ function updatePaginationUI() {
     $('.page-item').removeClass('active');
     $(`.page-item:eq(${currentPage - 1})`).addClass('active');
 }
+
+
+console.log(listingIds);
+
 });

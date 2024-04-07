@@ -19,6 +19,20 @@
           <div id="searchTitle">
             <h2 class="fw-bold text-white " style="text-shadow: 3px 3px 3px #011839;">FIND YOUR DREAM HOME HERE</h2>
           </div>
+          <!-- <ul class="nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link text-white  searchFilter" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white searchFilter" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white searchFilter" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white searchFilter" aria-disabled="true">Disabled</a>
+            </li>
+          </ul> -->
           <div id=" " class="d-flex flex-row flex-wrap">
             <div><button type="button"  class="btn text-white searchFilter" >For Sale</button></div> 
             <div><button type="button" class="btn text-white searchFilter">For Rent</button></div>
@@ -89,41 +103,46 @@
            
              
             </div>
-            <div class="propInfo card-footer d-flex gap-1 flex-wrap">
+            <!-- <div class="propInfo card-footer d-flex gap-1 flex-wrap">
               <div id="bedroom"><i class="fa-solid fa-bed " ></i> 3</div>
               <div id="bathroom"><i class="fa-solid fa-bath"></i> 2</div>
               <div id="carslot"><i class="fa-solid fa-car"></i> 2</div>
               <div id="floorArea" data-bs-toggle="tooltip"  title="Floor Area"> <img src="/assets/area-floor-size-icon (1).png" alt="" width="25px" sizes="" srcset=""> <span style="font-size: 12px;"> 450sqm</span>
               </div>
              
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pt-1">
           <div class="card h-100 shadow shadow-lg">
             <img src="/assets/img/3.jpg" class="card-img-top featImg" alt="...">
             <div class="card-body">
+
               <p class="propType fw-semibold w-75 text-center rounded">House And Lot</p>
               <h5 class="card-title fw-bold">₱ 49,000,000</h5>
-              <p class="card-text fw-semibold featInfo text-uppercase">sleek house and lot in capitol park homes, quezon city</p>
+
+              <a href="#" class="stretched-link card-text fw-semibold featInfo text-uppercase text-decoration-none text-dark">sleek house and lot in capitol park homes, quezon city</a>
+
+             
               <p style="font-size: 13px;">MCapitol Hills, Matandang Balara, Quezon City</p>
           
-                <div class="propInfo card-footer d-flex gap-1 flex-wrap">
+                <!-- <div class="propInfo card-footer d-flex gap-1 flex-wrap">
                   <div id="bedroom"><i class="fa-solid fa-bed " ></i> 3</div>
                   <div id="bathroom"><i class="fa-solid fa-bath"></i> 2</div>
                   <div id="carslot"><i class="fa-solid fa-car"></i> 2</div>
                   <div id="floorArea" data-bs-toggle="tooltip"  title="Floor Area"> <img src="/assets/area-floor-size-icon (1).svg" alt="" width="25px" sizes="" srcset=""> <span style="font-size: 12px;"> 450sqm</span>
                   </div>
                  
-                </div>
-            
+                </div> -->
+               
+
            
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 pt-1">
           <div class="card h-100 shadow shadow-lg">
-            <img src="/assets/img/4.jpg" class="card-img-top featImg" alt="...">
+            <img src="/assets/img/properties/4.jpg" class="card-img-top featImg" alt="...">
             <div class="card-body ">
               <p class="propType fw-semibold w-75 text-center rounded">House And Lot</p>
               <h5 class="card-title fw-bold">₱ 13,500,000</h5>
@@ -179,7 +198,7 @@
         </div>
 
         <div class="carousel-item acive h-100">
-          <div class="card h-100 shadow shadow-lg">
+          <div class="card h-100 shadow shadow-lg" type="button">
             <img src="/assets/img/4.jpg" class="card-img-top featImg" alt="...">
             <div class="card-body ">
               <p class="propType fw-semibold w-75 text-center rounded">House And Lot</p>
@@ -247,8 +266,9 @@
   
   <div class="row">
     <div class="col-lg-6 col-sm-12 ">
-            <img src="/assets/img/partners/about.png" id="knowImg" class="w-100" alt="">
-    </div>
+      <div class="ratio ratio-16x9">
+        <iframe width="424" height="250" src="https://www.youtube.com/embed/fOP3a4leNeg" title="Philproperties Company Profile- “Your Trusted Full Service Real Estate Partner”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+               </div>    </div>
 
     <div class="col-lg-6 col-sm-12 ">
         <div class="bg-light shadow rounded " style="z-index: 2;">
@@ -329,7 +349,7 @@
  </section>
 
 <section id="videos" class="py-5">
-  <div class="d-flex  justify-content-between">
+  <div class="d-flex  justify-content-between mb-3">
     <div>
       <h3 class="fw-bold">RECENT VIDEOS</h3>
     </div>
@@ -417,7 +437,9 @@
                 <label for="message">Message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" id="message" rows="3"></textarea>
             </div>
-
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
 
            </form>
         </div>
