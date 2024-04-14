@@ -150,7 +150,7 @@ $(document).ready(function () {
         const typeProp = $('<p>').addClass('propType').addClass('fw-semibold').addClass('w-75').addClass('text-center')
             .addClass('rounded').text(type);
         const priceProp = $('<h5>').addClass('card-title').addClass('fw-bold').text(prices);
-        const titleProp = $('<a>').attr('href', `listingView.html?id=${property_id}`).addClass('stretched-link').addClass('text-decoration-none').addClass('text-dark').addClass('card-text').addClass('fw-semibold').addClass('featInfo').text(`ID: ${property_id}, Title: ${title}`);
+        const titleProp = $('<a>').attr('href', `listingView.html?id=${property_id}`).addClass('stretched-link').addClass('text-decoration-none').addClass('text-dark').addClass('card-text').addClass('fw-semibold').addClass('featInfo').text(title);
         const addProp = $('<p>').attr('style', 'font-size: 13px').text(desc);   
 
         const cardfoot = $('<div>').addClass('card-footer');
