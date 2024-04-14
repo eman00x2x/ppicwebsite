@@ -128,6 +128,9 @@ body {
         height: 400px;
         width: 100%;
     }
+    .imageLg{
+        display: none;
+    }
 }
 
 @media (max-width: 767.98px) {
