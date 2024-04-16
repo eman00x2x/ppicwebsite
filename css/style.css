@@ -151,5 +151,10 @@ body {
         
     }
 
+    .menuItem navbar-nav 
+    {
+        font-size: 108px;
+    }
+
   
 }
