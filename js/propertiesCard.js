@@ -133,14 +133,20 @@ $(document).ready(function () {
 
 
 
-        ]
+        ],
+
+        offertypes:
+        ['For Sale','For Rent','For Sale','For Sale','For Sale','For Sale','For Rent','For Sale','For Rent','For Sale',
+        'For Sale','For Sale','For Sale','For Rent','For Sale','For Sale','For Sale','For Sale','For Sale','For Sale'
+        ,'For Rent','For Sale','For Sale','For Sale','For Rent'
+      ]
 
 
     }
 
 
 
-    function createCard(thumbnail, type, prices, title, desc, propInfo, property_id, propertyImage) {
+    function createCard(thumbnail, type, prices, title, desc, propInfo, property_id, propertyImage, offer_type) {
 
 
         const column = $('<div>').addClass('col-lg-3').addClass('col-sm-6').addClass('pt-1');
@@ -178,7 +184,8 @@ $(document).ready(function () {
                 desc: desc,
                 propInfo: propInfo,
                 property_id: property_id,
-                propertyImage: propertyImage // Make sure this line is present
+                propertyImage: propertyImage ,
+                offer_type: offer_type
             }));
 
             
@@ -193,10 +200,8 @@ $(document).ready(function () {
 
     for (let i = 0; i < dataProperty.thumbnails.length; i++) {
         const property_id = i + 1;
-        createCard(dataProperty.thumbnails[i], dataProperty.types[i], dataProperty.prices[i], dataProperty.titles[i], dataProperty.descs[i], dataProperty.propertyData[i], property_id,dataProperty.propertyImages[i]);
-        // console.log(dataProperty.propertyImages[0].img1)
-        // console.log(dataProperty.propertyImages[i])
-
+        createCard(dataProperty.thumbnails[i], dataProperty.types[i], dataProperty.prices[i], dataProperty.titles[i], dataProperty.descs[i], dataProperty.propertyData[i], property_id,dataProperty.propertyImages[i],dataProperty.offertypes[i]);
+ 
 
     }
 
@@ -212,7 +217,7 @@ $(document).ready(function () {
         const endIndex = startIndex + cardsPerPage;
         for (let i = startIndex; i < endIndex && i < dataProperty.thumbnails.length; i++) {
             const property_id = i + 1; 
-            createCard(dataProperty.thumbnails[i], dataProperty.types[i], dataProperty.prices[i], dataProperty.titles[i], dataProperty.descs[i], dataProperty.propertyData[i], property_id,dataProperty.propertyImages[i]);
+            createCard(dataProperty.thumbnails[i], dataProperty.types[i], dataProperty.prices[i], dataProperty.titles[i], dataProperty.descs[i], dataProperty.propertyData[i], property_id,dataProperty.propertyImages[i],dataProperty.offertypes[i]);
         }
     }
     
@@ -241,7 +246,7 @@ $(document).ready(function () {
     }
 
 
-    // console.log(dataProperty.listingIds);
+    // console.log(dataProperty.offertypes);
 
 });
 
@@ -256,6 +261,9 @@ $(document).ready(function() {
     const thirdImg= $('.third-img')
     const fourthImg = $('.fourth-img')
     const fifthImg = $('.fifth-img')
+    const offertype = $('.offer-type')
+    const price = $('.prop-price')
+    const propType = $('.prop-type')
 
     const seeMore = $('.seemore')
     if (clickedCardData) {
@@ -267,9 +275,12 @@ $(document).ready(function() {
         thirdImg.attr('src',clickedCardData.propertyImage.img3)
         fourthImg.attr('src',clickedCardData.propertyImage.img4)
         fifthImg.attr('src',clickedCardData.propertyImage.img5)
+        offertype.html(` <p>${clickedCardData.offer_type}<p>`)
+        price.html(` <p>${clickedCardData.prices}<p>`)
+        propType.html(` <p>${clickedCardData.type}<p>`)
+
 
         seeMore.css('background-image', `url(${clickedCardData.propertyImage.img3})`)
-
     }
 
    
@@ -277,29 +288,29 @@ $(document).ready(function() {
 
 
     const listingDetails = $('#listing-details');
-    if (clickedCardData) {
-        listingDetails.html(`
+    // if (clickedCardData) {
+    //     listingDetails.html(`
 
             
 
-            // <h2>${clickedCardData.title}</h2>
-            // <img src="${clickedCardData.thumbnail}" alt="Thumbnail">
-            // <p>Type: ${clickedCardData.type}</p>
-            // <p>Prices: ${clickedCardData.prices}</p>
-            // <p>Description: ${clickedCardData.desc}</p>
-            // <p>ID: ${clickedCardData.property_id}</p>
+    //         // <h2>${clickedCardData.title}</h2>
+    //         // <img src="${clickedCardData.thumbnail}" alt="Thumbnail">
+    //         // <p>Type: ${clickedCardData.type}</p>
+    //         // <p>Prices: ${clickedCardData.prices}</p>
+    //         // <p>Description: ${clickedCardData.desc}</p>
+    //         // <p>ID: ${clickedCardData.property_id}</p>
 
-            // <p>Property Info:</p>
-            // <ul>
-            //     <li>Bedrooms: ${clickedCardData.propInfo.bed}</li>
-            //     <li>Bathrooms: ${clickedCardData.propInfo.bath}</li>
-            //     <li>Car Parking: ${clickedCardData.propInfo.car}</li>
-            //     <li>Area: ${clickedCardData.propInfo.expand}</li>
-            // </ul>
-        `);
-        const titleLink = $('<a>').attr('href', '#').text('Go back to listing'); // Replace '#' with the appropriate link
-        listingDetails.append(titleLink);
-    } else {
-        listingDetails.html('<p>No data available.</p>');
-    }
+    //         // <p>Property Info:</p>
+    //         // <ul>
+    //         //     <li>Bedrooms: ${clickedCardData.propInfo.bed}</li>
+    //         //     <li>Bathrooms: ${clickedCardData.propInfo.bath}</li>
+    //         //     <li>Car Parking: ${clickedCardData.propInfo.car}</li>
+    //         //     <li>Area: ${clickedCardData.propInfo.expand}</li>
+    //         // </ul>
+    //     `);
+    //     const titleLink = $('<a>').attr('href', '#').text('Go back to listing'); // Replace '#' with the appropriate link
+    //     listingDetails.append(titleLink);
+    // } else {
+    //     listingDetails.html('<p>No data available.</p>');
+    // }
 });
