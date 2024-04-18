@@ -2,154 +2,62 @@
 $(document).ready(function () {
 
 
-    const dataProperty = {
+ 
+const JsonUrl = 'json/DataProperty.json'
 
-
-        thumbnails: [
-            '/assets/img/properties/4.jpg'
-            ,'/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg', 
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg', 
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg',
-            '/assets/img/properties/4.jpg', '/assets/img/properties/4.jpg', 
-            '/assets/img/properties/4.jpg'
-        ],
-        types: ['House and Lot'
-        , 'House and Lot', 'Commercial', 'House and Lot', 'House and Lot', 'Townhouse',
-            'House and Lot', 'Commercial', 'House and Lot', 'House and Lot', 'Commercial', 'Townhouse', 'Townhouse', , 'House and Lot', 'Commercial', 'House and Lot', 'House and Lot', 'Townhouse',
-            'House and Lot', 'Commercial', 'House and Lot', 'House and Lot', 'Commercial', 'Townhouse', 'Townhouse',
-        ],
-        titles: ['Ravishing House and Lot with Pool for Sale at Greenwoods Exexutive Village,Taytay Rizal',
-            '2 Storey House and Lot with Rooftop for Sale at Greenwoods Executive Village, Pasig City',
-            'Astonishing Mountaintop House and Lot for sale at Clark Sun Valley, Pampanga',
-            'Spacious Lot For Sale in Forest hills Golf And Country Club, Antipolo City',
-            'Overlooking House and Lot with Sunrise View for Sale at Edgewood, Sunvalley Antipolo City',
-            'Modern 3 Storey House and Lot for sale at Filinvest East Homes, Cainta Rizal',
-            'Taal Overlooking Lot for Sale at Tagaytay Highlands, Tagaytay City  ',
-            'Modern Asian Designed House and Lot with pool for sale at Pasong Tamo, Quezon City',
-            'Stylish 2 Storey House and Lot in BF Homes, Paranaque City',
-            'Splendid 3-Storey House and Lot at BF Homes, Paranaque City',
-            'Modern Contemporary House and Lot at Geeenwoods Executive Village',
-            'Modern Alluring House and Lot for sale at Greenwoods Executive Village, Taytay Rizal', 'Splendid 3-Storey House and Lot at BF Homes, Paranaque City',
-            '2 Storey House and Lot with Rooftop for Sale at Greenwoods Executive Village, Pasig City',
-            'Astonishing Mountaintop House and Lot for sale at Clark Sun Valley, Pampanga',
-            'Spacious Lot For Sale in Forest hills Golf And Country Club, Antipolo City',
-            'Overlooking House and Lot with Sunrise View for Sale at Edgewood, Sunvalley Antipolo City',
-            'Modern 3 Storey House and Lot for sale at Filinvest East Homes, Cainta Rizal',
-            'Taal Overlooking Lot for Sale at Tagaytay Highlands, Tagaytay City  ',
-            'Modern Asian Designed House and Lot with pool for sale at Pasong Tamo, Quezon City',
-            'Stylish 2 Storey House and Lot in BF Homes, Paranaque City',
-            'Splendid 3-Storey House and Lot at BF Homes, Paranaque City',
-            'Modern Contemporary House and Lot at Geeenwoods Executive Village',
-            'Modern Alluring House and Lot for sale at Greenwoods Executive Village, Taytay Rizal', 'Splendid 3-Storey House and Lot at BF Homes, Paranaque City',
-        ],
-        descs: ['Merville, Merville, Parañaque City'
-        , 'Ayala Heights, Matandang Balara, Quezon City', 'Border of Las Piñas & Paranaque, Manuyo Dos, Las Piñas City,',
-            'Tangerine St., Concepcion, Marikina City', 'Bf Homes, Parañaque City', 'Ortigas Extension , Pasig City',
-            'Commercial Lot with ,lot area of 456sqm for rent in Xavierville Ave. , Quezon City', '10 bedroom Building with ,floor area of 450sqm ,lot area of 100sqm for rent in Cubao , Quezon City', '1 bedroom Condominium with for rent in Mall of Asia, Pasay City',
-            '4 bedroom House and Lot with ,floor area of 325sqm ,lot area of 540sqm for sale in Clark, Sun Valley, Pampanga', 'Forest Hills, Inarawan, Antipolo City', 'Edgewood, Inarawan, Antipolo City'
-            , 'Residential Lot with for sale in Tagaytay Highlands, Tagaytay', 'Ayala Heights, Matandang Balara, Quezon City', 'Border of Las Piñas & Paranaque, Manuyo Dos, Las Piñas City,',
-            'Tangerine St., Concepcion, Marikina City', 'Bf Homes, Parañaque City', 'Ortigas Extension , Pasig City',
-            'Commercial Lot with ,lot area of 456sqm for rent in Xavierville Ave. , Quezon City', '10 bedroom Building with ,floor area of 450sqm ,lot area of 100sqm for rent in Cubao , Quezon City', '1 bedroom Condominium with for rent in Mall of Asia, Pasay City',
-            '4 bedroom House and Lot with ,floor area of 325sqm ,lot area of 540sqm for sale in Clark, Sun Valley, Pampanga', 'Forest Hills, Inarawan, Antipolo City', 'Edgewood, Inarawan, Antipolo City'
-            , 'Residential Lot with for sale in Tagaytay Highlands, Tagaytay'
-        ],
-
-        prices: ['55,000,000'
-        ,         ' 45,000,000', ' 39,000,000', '  22,700,000', ' 15,000,000', ' 17,000,000'
-            , ' 24,000,000', '  18,000,000', ' 19,500,000', ' 72,000,000', ' 47,300,000', ' 45,000,000', ' 45,000,000', '55,000,000', ' 45,000,000', ' 39,000,000', '  22,700,000', ' 15,000,000', ' 17,000,000'
-            , ' 24,000,000', '  18,000,000', ' 19,500,000', ' 72,000,000', ' 47,300,000', ' 45,000,000', ' 45,000,000'
-        ],
-
-        propertyData: [
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 3, bath: 2, car: 2, expand: "450sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-            { bed: 2, bath: 1, car: 1, expand: "300sqm" },
-
-
-
-        ],
-
-        listingIds: [],
-
-        propertyImages: [
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-2.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-                {img1: '/assets/img/1-1.jpg',img2: '/assets/img/1-2.jpg',img3: '/assets/img/1-3.jpg',img4: '/assets/img/1-4.jpg',img5: '/assets/img/1-5.jpg' },
-
-
-
-
-        ],
-
-        offertypes:
-        ['For Sale','For Rent','For Sale','For Sale','For Sale','For Sale','For Rent','For Sale','For Rent','For Sale',
-        'For Sale','For Sale','For Sale','For Rent','For Sale','For Sale','For Sale','For Sale','For Sale','For Sale'
-        ,'For Rent','For Sale','For Sale','For Sale','For Rent'
-      ]
-
-
+fetch(JsonUrl)
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
     }
+    return response.json();
+})
+.then(dataProperty => {
+    processData(dataProperty);
+
+    // Filter logic
+    $('form').submit(function (event) {
+        event.preventDefault();
+        const offerType = $('#offerType').val()
+        const propType = $('#propertyType').val()
+        const location = $('#location').val()
+        const price = $('#price').val()
+        const bedroom = $('#bedroom').val()
+        const subcateg = $('#subcateg').val()
+        const forclose = $('#foreclose').val()
+        const bathroom = $('#bathroom').val()
+        const floorarea = $('#floorArea').val()
+        const landarea = $('#landArea').val()
+        const amenities = $('#amenities').val()
+        
+
+        console.log(offerType)
+        console.log(propType)
+        console.log(location)
+        console.log(price)
+        console.log(bedroom)
+        console.log(subcateg)
+        console.log(forclose)
+        console.log(bathroom)
+        console.log(floorarea)
+        console.log(landarea)
+        console.log(amenities)
 
 
+      
+    });
+})
+.catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+});
 
+
+    function processData(dataProperty) {
+        
     function createCard(thumbnail, type, prices, title, desc, propInfo, property_id, propertyImage, offer_type) {
 
 
-        const column = $('<div>').addClass('col-lg-3').addClass('col-sm-6').addClass('pt-1');
+        const column = $('<div>').addClass('col-lg-3').addClass('col-sm-6').addClass('pt-1').addClass('kard');
         const card = $('<div>').addClass('card').addClass('h-100').addClass('w-100').addClass('col-lg-4').addClass('shadow').attr('type', 'button').addClass('shadow-lg');
         const thumbnailImg = $('<img>').attr('src', thumbnail).addClass('card-img-top').addClass('featImg');
         const cardbody = $('<div>').addClass('card-body');
@@ -224,26 +132,59 @@ $(document).ready(function () {
     const totalPages = Math.ceil(dataProperty.thumbnails.length / cardsPerPage);
     displayPage(currentPage);
 
-
     const pagination = $('#pagination');
-
-    const page = $('<ul>').addClass('pagination').addClass('pagination-sm')
+    const page = $('<ul>').addClass('pagination').addClass('pagination-sm').css('color','black');
+    
+    // Previous Button
+    const prevButton = $('<li>').addClass('page-item');
+    const prevButtonLink = $('<a>').addClass('page-link').attr('href', '#').text('Previous');
+    prevButton.append(prevButtonLink);
+    prevButtonLink.on('click', function (e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            displayPage(currentPage);
+            updatePaginationUI();
+        }
+    });
+    page.append(prevButton);
+    
+    // Page Numbers
     for (let i = 1; i <= totalPages; i++) {
         const pageLink = $('<a>').addClass('page-link').text(i);
         const pageItem = $('<li>').addClass('page-item').append(pageLink);
+    
         pageLink.on('click', function () {
             currentPage = i;
             displayPage(currentPage);
             updatePaginationUI();
         });
-        page.append(pageItem)
-        pagination.append(page);
+        page.append(pageItem);
     }
-
+    
+    // Next Button
+    const nextButton = $('<li>').addClass('page-item');
+    const nextButtonLink = $('<a>').addClass('page-link').attr('href', '#').text('Next');
+    nextButton.append(nextButtonLink);
+    nextButtonLink.on('click', function (e) {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayPage(currentPage);
+            updatePaginationUI();
+        }
+    });
+    page.append(nextButton);
+    
+    pagination.append(page);
+    
     function updatePaginationUI() {
         $('.page-item').removeClass('active');
-        $(`.page-item:eq(${currentPage - 1})`).addClass('active');
+        $(`.page-item:eq(${currentPage})`).addClass('active');
     }
+    }
+
+
 
 
     // console.log(dataProperty.offertypes);
@@ -256,61 +197,73 @@ $(document).ready(function() {
 
     const breadTitle = $('.bread-title')
     const propAdd  = $('#prop-add')
-    const mainImg = $('.main-img')
-    const secondImg = $('.second-img')
-    const thirdImg= $('.third-img')
-    const fourthImg = $('.fourth-img')
-    const fifthImg = $('.fifth-img')
-    const offertype = $('.offer-type')
-    const price = $('.prop-price')
-    const propType = $('.prop-type')
+    const imageElements = [$('.main-img'), $('.second-img'), $('.third-img'), $('.fourth-img'), $('.fifth-img')];
+    const calcPrice = $('#price')
+
+
+
+    const fotoramaContainer = $('.modalCaro');
 
     const seeMore = $('.seemore')
-    if (clickedCardData) {
+    if (clickedCardData  && clickedCardData.propertyImage) {
 
         breadTitle.html(` <p>${clickedCardData.title}<p>`)
+        // calcPrice.attr('value', clickedCardData.prices);
         propAdd.text(clickedCardData.desc)
-        mainImg.attr('src',clickedCardData.propertyImage.img1)
-        secondImg.attr('src',clickedCardData.propertyImage.img2)
-        thirdImg.attr('src',clickedCardData.propertyImage.img3)
-        fourthImg.attr('src',clickedCardData.propertyImage.img4)
-        fifthImg.attr('src',clickedCardData.propertyImage.img5)
-        offertype.html(` <p>${clickedCardData.offer_type}<p>`)
-        price.html(` <p>${clickedCardData.prices}<p>`)
-        propType.html(` <p>${clickedCardData.type}<p>`)
 
-
+        for (let i = 0; i < imageElements.length; i++) {
+            const imgSrc = clickedCardData.propertyImage[`img${i + 1}`];
+            imageElements[i].attr('src', imgSrc);
+        }
+    
         seeMore.css('background-image', `url(${clickedCardData.propertyImage.img3})`)
+
+        const propertyImages = clickedCardData.propertyImage;
+        const imageKeys = Object.keys(propertyImages);
+        imageKeys.forEach(function(key) {
+            const img = $('<img>').attr('src', propertyImages[key]);
+
+            fotoramaContainer.append(img);
+
+        });
+
+        fotoramaContainer.fotorama();
+
+      
+        const cardData = [
+            { title: 'OFFER TYPE', data: clickedCardData.offer_type },
+            { title: 'SELLING PRICE', data: clickedCardData.prices },
+            { title: 'PROPERTY TYPE', data: clickedCardData.type },
+            { title: 'BEDROOMS', data: clickedCardData.propInfo.bed },
+            { title: 'BATHROOMS', data: clickedCardData.propInfo.bath },
+            { title: 'CAR GARAGE', data: clickedCardData.propInfo.car },
+            { title: 'LOT AREA', data: clickedCardData.propInfo.expand },
+            { title: 'FLOOR AREA', data: clickedCardData.propInfo.house }
+        ];
+        const cardElements = cardData.map(({ title, data, unit }) => propData(title, data, unit));
+        $('.row-cols-1').html(cardElements.join(''));
+
+
+
     }
 
-   
+   function propData(title, data,unit = '')
+   {
+    return `
+    <div class="col-6 col-md-6 col-lg-3 rounded-0 border border-1>
+        <div class="card h-100 ">
+            <div class="card-body text-center p-2 pt-4">
+                <h4 class="card-title fw-bold">${data}</h4>
+                <div class="card-text">
+                    <p>${title}${unit}</p>
+                </div>
+            </div>
+        </div>
+    </div>`;
+   }
 
 
 
     const listingDetails = $('#listing-details');
-    // if (clickedCardData) {
-    //     listingDetails.html(`
-
-            
-
-    //         // <h2>${clickedCardData.title}</h2>
-    //         // <img src="${clickedCardData.thumbnail}" alt="Thumbnail">
-    //         // <p>Type: ${clickedCardData.type}</p>
-    //         // <p>Prices: ${clickedCardData.prices}</p>
-    //         // <p>Description: ${clickedCardData.desc}</p>
-    //         // <p>ID: ${clickedCardData.property_id}</p>
-
-    //         // <p>Property Info:</p>
-    //         // <ul>
-    //         //     <li>Bedrooms: ${clickedCardData.propInfo.bed}</li>
-    //         //     <li>Bathrooms: ${clickedCardData.propInfo.bath}</li>
-    //         //     <li>Car Parking: ${clickedCardData.propInfo.car}</li>
-    //         //     <li>Area: ${clickedCardData.propInfo.expand}</li>
-    //         // </ul>
-    //     `);
-    //     const titleLink = $('<a>').attr('href', '#').text('Go back to listing'); // Replace '#' with the appropriate link
-    //     listingDetails.append(titleLink);
-    // } else {
-    //     listingDetails.html('<p>No data available.</p>');
-    // }
+  
 });
