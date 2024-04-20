@@ -62,7 +62,7 @@ h2 {
     content:attr(data-title);
     position:absolute;
     top:calc(100% + 0.5rem);
-    color:black;
+    color:#131C39;
     font-size:20px;
 }
 
@@ -202,7 +202,7 @@ h2 {
         top: -20px; /* Adjust the top position */
         left: 50%; /* Align text in the center */
         transform: translateX(-50%); /* Center horizontally */
-        background-color: #000000; /* Background color */
+        background-color:#131C39; /* Background color */
         padding: 10px 10px; /* Padding around text */
         color:white;
         border-radius:20px;
