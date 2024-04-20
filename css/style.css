@@ -24,6 +24,10 @@ body {
 }
 
 
+.formBtnSm
+{
+    display: none;
+}
 
 .featImg {
     height: 250px;
@@ -56,6 +60,15 @@ body {
 {
     margin-bottom: -80px;
 }
+.morefilter
+{
+    display: none;
+}
+
+/* .modalCaro
+{
+    display: none;
+} */
 
 
 @media (max-width: 575.98px) {
@@ -131,13 +144,25 @@ body {
     .imageLg{
         display: none;
     }
+    .contactUs
+    {
+        padding: 0px;
+    }
 }
 
-@media (max-width: 767.98px) {
 
+
+@media (max-width: 992px) {
+    .formBtnLg{
+        display: none;
+    }
+
+    .formBtnSm{
+        display: block;
+    }
     .searchFilter
     {
-        font-size:8px;
+        font-size:10px;
     }
 
     #hero
@@ -155,6 +180,73 @@ body {
     {
         font-size: 108px;
     }
-
-  
+    
 }
+
+
+.seemore {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    /* Adjust height as needed */
+
+
+  }
+  
+
+.carosm img{
+  width: 80px;
+  height: 70px;
+  display: block;
+
+}
+
+
+
+
+
+.carosm button
+{
+  width: max-content!important;
+} 
+
+
+ .carosm
+{
+  position: unset;
+} 
+.agentCon
+{
+display: none;
+}
+  .seeBtn {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 1000px;
+
+  }
+
+  @media (max-width: 575.98px) {
+    .card-title {
+      font-size: 18px;
+    }
+
+    .card-text p {
+      font-size: 12px;
+    }
+
+    .agentCard
+    {
+      display: none;
+    }
+    .calcu
+    {
+      padding-top: 20px;
+      text-align: center;
+    }
+    .agentCon
+    {
+      display: block;
+    }
+  }

@@ -5,95 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>View Property</title>
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- Note: using https -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- Note: using https -->
+  <link rel="stylesheet" href="/css/style.css">
 
-  <style>
-    .seemore {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 100%;
-      height: 200px;
-      /* Adjust height as needed */
-
-
-    }
-.modalCaro img
-{
-  width: 500px;
-}
-
-.carosm img{
-    width: 80px;
-    height: 70px;
-    display: block;
-
-  }
-
-.carousel-indicators
-{
-  position: relative;
-bottom:20px;
-
-
-}
-
-.carolg img{
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-  } 
-
-  .carosm button
-  {
-    width: max-content!important;
-  } 
-
-  
-   .carosm
-  {
-    position: unset;
-  } 
-.agentCon
-{
-  display: none;
-}
-    .seeBtn {
-      background-color: rgba(0, 0, 0, 0.4);
-      width: 1000px;
-
-    }
-
-    @media (max-width: 575.98px) {
-      .card-title {
-        font-size: 18px;
-      }
-
-      .card-text p {
-        font-size: 12px;
-      }
-
-      .agentCard
-      {
-        display: none;
-      }
-      .calcu
-      {
-        padding-top: 20px;
-        text-align: center;
-      }
-      .agentCon
-      {
-        display: block;
-      }
-    }
-  </style>
 </head>
 
 
@@ -157,207 +78,41 @@ bottom:20px;
             </div>
           </div>
 
-
-          <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg  ">
-                <div class="modal-content">
-                 
-                  <div id="moreImage" class="carousel slide bg-dark p-3 ">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="modalCaro d-flex justify-content-center">
-                          <img class="main-img d-block" alt="..." >
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="modalCaro d-flex justify-content-center">
-                          <img class="second-img d-block" alt="...">
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="modalCaro d-flex justify-content-center">
-                          <img class="third-img d-block" alt="..." >
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="modalCaro d-flex justify-content-center">
-                          <img class="fourth-img d-block" alt="..." >
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="modalCaro d-flex justify-content-center">
-                          <img class="fifth-img d-block" alt="..." >
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#moreImage" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#moreImage" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  
-                   
-                     
-                        <div class="carousel-indicators carolg d-flex flex-row gap-5 p-4" >
-                          <button type="button" data-bs-target="#moreImage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                            <img  class="main-img" alt="">
-                          </button>
-                          <button type="button" data-bs-target="#moreImage" data-bs-slide-to="1" aria-label="Slide 2">
-                            <img class="second-img" alt="">
-                          </button>
-                          <button type="button" data-bs-target="#moreImage" data-bs-slide-to="2" aria-label="Slide 3">
-                            <img class="third-img" alt="">
-                          </button>
-                          <button type="button" data-bs-target="#moreImage" data-bs-slide-to="3" aria-label="Slide 4">
-                            <img class="fourth-img" alt="">
-                          </button>
-                          <button type="button" data-bs-target="#moreImage" data-bs-slide-to="4" aria-label="Slide 5">
-                            <img class="fifth-img" alt="">
-                          </button>
-                        </div>
-                      
-                  
-                    
-                  </div> 
-           
-
-
-                </div>
-            </div>
-          </div>
-
-          <div class="caroProp pb-5">
-            <div id="carouselExample" class="carousel slide">
+       
+          
         
-              <div class="carousel-inner">
-                <div class="carousel-item active  h-100">
-                  <div class="card h-100 w-100 shadow shadow-lg ">
-                    <img class="card-img-top featImg main-img"  alt="...">
-                  </div>
+          <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+             
+          
+                  <div class="modalImage">
+                    <div class="modalCaro bg-dark p-2" data-height="500"
+                    data-nav="thumbs"  data-allowfullscreen="true">
+              
+               
                 </div>
-                <div class="carousel-item active h-100" >
-                  <div class="card h-100 shadow shadow-lg">
-                  
-                    <img src="/assets/img/1-2.jpg" class="card-img-top featImg second-img" alt="...">
-                    
                   </div>
-                
-              </div>
-              <div class="carousel-item active h-100">
-                <div class="card h-100 shadow shadow-lg">
-                  <img src="/assets/img/1-3.jpg" class="card-img-top featImg third-img" alt="...">
-                </div>
-              </div>
-      
-           
-      
-      
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
 
-            <div class="carousel-indicators carosm">
-              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="/assets/img/1-1.jpg" alt=""></button>
-              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"><img src="/assets/img/1-2.jpg" alt=""></button>
-              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"><img src="/assets/img/1-3.jpg" alt=""></button>
+
+                </div>
             </div>
           </div>
+
+          <div class="modalImage caroProp">
+            <div class="modalCaro p-2" data-height="500"
+            data-nav="thumbs"  data-allowfullscreen="true">
+      
+       
+        </div>
           </div>
+     
+        
 
           <div class="py-3">
-            <div class="row g-0 row-cols-1 row-cols-md-3 ">
-              <div class="col-6 col-md-6 col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold offer-type "></h4>
-                    <div class="card-text">
-                      <p>OFFER TYPE</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 col-md-6 col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold prop-price">₱35,000,00</h4>
-                    <div class="card-text">
-                      <p>SELLING PRICE</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4  col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold prop-type"></h4>
-                    <div class="card-text">
-                      <p>PROPERTY TYPE</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4  col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold prop-bed">5</h4>
-                    <div class="card-text">
-                      <p>BEDROOMS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold prop-bath">4</h4>
-                    <div class="card-text">
-                      <p>BATHROOMS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold prop-car">3</h4>
-                    <div class="card-text">
-                      <p>CAR GARAGE</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold prop-lot">134 sqm</h4>
-                    <div class="card-text">
-                      <p>LOT AREA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 col-lg-3 ">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <h4 class="card-title fw-bold">340 sqm</h4>
-                    <div class="card-text">
-                      <p>FLOOR AREA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-
-            </div>
+            <div class="py-3">
+              <div class="row g-0 row-cols-1"><!-- Container for dynamically generated card elements --></div>
+          </div>
 
 
           </div>
@@ -459,10 +214,10 @@ bottom:20px;
           </div>
           </div>
         
-            <div class="desc">
+            <div class="Description">
               <h3>Description</h3>
               <hr>
-              <p>
+              <p class="prop-desc">
                 This Cozy Contemporary House and Lot for sale at Maginhawa, Quezon City has 134sqm lot area and 340sqm
                 floor area, 5 bedrooms, 4 bathrooms and 3 car garage
               </p>
@@ -514,44 +269,14 @@ bottom:20px;
                 <div class="flex-fill border border-dark border-1">
                   <div class="fw-bold ps-3">92425252525</div>
                 </div>
-                <!-- <div>   <div class="position-absolute" style="left:1280px;">              
-                                <div> <button class="bg-dark text-white border-0 rounded-end px-2 py-1 ">SHOW NUMBER</button></div>             
-                            </div></div> -->
-
+               
               </div>
             </div>
 
             <hr>
 
             <div class="d-flex justify-content-center">
-              <!-- <form action="" class="">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <label for="">First Name</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <label for="">Last Name</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <label for="">Contact Number</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <label for="">Email Address</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-
-                                <div class="text-center py-3">
-                                    <button type="submit" class="btn btn-sm btn-primary">
-                                        Send Message
-                                    </button>
-                                </div>
-                
-
-                          </form> -->
+       
               <form action="">
                 <div class="row">
                   <div class="col-12">
@@ -615,7 +340,7 @@ bottom:20px;
                   <div class="row g-3">
                     <div class="col-6">
                       <label for="">Purchase Price</label>
-                      <input type="text" id="price" class="form-control form-control-sm">
+                      <input type="text" id="price" class="form-control form-control-sm" disabled>
                     </div>
 
                     <div class="col-6">
@@ -714,14 +439,7 @@ bottom:20px;
          
            
           </div>
-          <!-- <div class="propInfo card-footer d-flex gap-1 flex-wrap">
-            <div id="bedroom"><i class="fa-solid fa-bed " ></i> 3</div>
-            <div id="bathroom"><i class="fa-solid fa-bath"></i> 2</div>
-            <div id="carslot"><i class="fa-solid fa-car"></i> 2</div>
-            <div id="floorArea" data-bs-toggle="tooltip"  title="Floor Area"> <img src="/assets/area-floor-size-icon (1).png" alt="" width="25px" sizes="" srcset=""> <span style="font-size: 12px;"> 450sqm</span>
-            </div>
-           
-          </div> -->
+    
         </div>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 pt-1">
@@ -737,14 +455,7 @@ bottom:20px;
            
             <p style="font-size: 13px;">MCapitol Hills, Matandang Balara, Quezon City</p>
         
-              <!-- <div class="propInfo card-footer d-flex gap-1 flex-wrap">
-                <div id="bedroom"><i class="fa-solid fa-bed " ></i> 3</div>
-                <div id="bathroom"><i class="fa-solid fa-bath"></i> 2</div>
-                <div id="carslot"><i class="fa-solid fa-car"></i> 2</div>
-                <div id="floorArea" data-bs-toggle="tooltip"  title="Floor Area"> <img src="/assets/area-floor-size-icon (1).svg" alt="" width="25px" sizes="" srcset=""> <span style="font-size: 12px;"> 450sqm</span>
-                </div>
-               
-              </div> -->
+
              
 
          
