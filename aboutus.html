@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../../src/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .container1 {
+            margin-left: 120px;
+            margin-right: 120px;
+            margin-bottom: 40px;
+            margin-top: 4rem;
+        }
+
+        .container2 {
+            margin-left: 120px;
+            /* width: 700px; */
+
+        }
+
+        .container3 {
+            /* margin-bottom: 1000px; */
+            padding-top: 50px
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .btn {
+            background-color: rgba(19, 28, 57, 0.2);
+            border-radius: 20px;
+            color: white;
+            width: 250px;
+            font-size: 22px;
+            margin-right: 10px;
+            height: 55px;
+            font-weight: bold;
+
+        }
+
+        .btn:hover {
+            background-color: rgba(19, 28, 57, 1);
+            border-radius: 20px;
+            color: white;
+            width: 250px;
+            font-size: 22px;
+            margin-right: 10px;
+            height: 55px;
+            font-weight: bold;
+
+        }
+
+        .btn.active {
+            color: white;
+            background-color: rgba(19, 28, 57, 1);
+
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+
+        .aboutp {
+            padding-left: 135px;
+            font-weight: 500;
+        }
+
+        .video-container {
+            padding-left: 100px;
+            width: 800px;
+            height: 350px;
+        }
+
+        .video {
+            width: 100%;
+            height: 350px;
+
+        }
+
+        .content2 {
+            padding-left: 130px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+
+        .content2p {
+            font-weight: 500;
+            padding-left: 20px;
+        }
+
+        .content3 {
+            padding-left: 120px;
+            padding-bottom: 60px;
+        }
+
+
+        @media only screen and (max-width: 1000px) {
+            .container1 {
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-bottom: 30px;
+                margin-top: 4rem;
+            }
+
+            .container2 {
+                margin-left: 100px;
+                /* margin-right: 70px; */
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .btn {
+                border-radius: 20px;
+                width: 175px;
+                font-size: 16px;
+                margin-right: 10px;
+                height: 40px;
+                font-weight: bold;
+            }
+
+            .btn:hover {
+                border-radius: 20px;
+                width: 175px;
+                font-size: 16px;
+                margin-right: 10px;
+                height: 40px;
+                font-weight: bold;
+            }
+
+            .aboutp {
+                padding-left: 110px;
+                padding-right: 50px;
+                font-weight: 500;
+                font-size: 12px;
+                text-align: justify;
+
+            }
+
+            .video-container {
+                width: 100%;
+                height: 400px;
+                padding-left: 0;
+
+            }
+
+            .content2 {
+                padding-right: 20px;
+            }
+
+            .content3 {
+                padding-left: 30px;
+                padding-right: 120px;
+            }
+
+        }
+
+        @media only screen and (max-width: 800px) {
+            .container1 {
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-bottom: 15px;
+                margin-top: 3rem;
+            }
+
+            .container2 {
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+
+            .btn {
+                border-radius: 20px;
+                width: 120px;
+                font-size: 11px;
+                margin-right: 0px;
+                height: 32px;
+                font-weight: bold;
+            }
+
+            .btn:hover {
+                border-radius: 20px;
+                width: 120px;
+                font-size: 11px;
+                margin-right: 0px;
+                height: 32px;
+                font-weight: bold;
+
+            }
+
+            .aboutp {
+                padding-left: 47px;
+                padding-right: 15px;
+                font-weight: 500;
+                font-size: 12px;
+                text-align: justify;
+            }
+
+            .video {
+                padding-left: 30px;
+                padding-right: 0;
+                width: 100%;
+                height: 280px;
+            }
+
+            .content2 {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .content3 {
+                padding-left: 55px;
+                padding-right: 50px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="NavBar"></div>
+    </nav>
+    <section>
+        <div class="container1">
+            <h1 class="text-start fw-bold">About Philproperties International Corporation</h1>
+        </div>
+
+    </section>
+    <div class="container2" id="container2">
+        <button class="btn active" data-div="div1" onclick="showDiv('div1', this)">Get to Know Us</button>
+        <button class="btn" data-div="div2" onclick="showDiv('div2', this)">Mission & Vision</button>
+    </div>
+    <div id="div1" class="content active ">
+        <!-- Content of Div 1 -->
+        <div class="container3 " style="margin-bottom: 50px;">
+            <div class="row w-100">
+                <div class="col-md-6 col-12 aboutp">
+                    <p class="lh-2">PHILPROPERTIES INTERNATIONAL CORPORATION (PPIC) is a dynamic company that offers
+                        comprehensive service to
+                        cover all clientele real estate needs. Established in 2006, it is home to professional realtors,
+                        consultants and agents with varying specialities for the stress-free buying, selling and renting
+                        experience or any other real-estate needs on the part of its clientele. The company is
+                        relentless in its
+                        pursuit for excellence to ensure customer satisfaction with secure and sound real estate
+                        investments.
+                    </p>
+                    <p class="lh-2">PPIC is currently specialized in the Mega-Manila area private properties and
+                        commercial developments. We have
+                        partnered up with all major real estate developers that include Ayala Land, Avida, SMDC, DMCI,
+                        Robinson's
+                        Land, Vista Land, Eton Properties, Duraville, Sta. Lucia Realty, Genato Management Corporation
+                        among many
+                        others.
+                    </p>
+                    <p class="lh-2">With the wealth of experience of its founder, Manny Florendo and partners since
+                        1996, PPIC has rapidly grown
+                        to be amongst the most reputable and reliable real estate management companies in the country.
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="video-container">
+                        <iframe class="video" src="https://www.youtube.com/embed/fOP3a4leNeg"
+                            title="Philproperties Company Profile- “Your Trusted Full Service Real Estate Partner”"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="div2" class="content">
+        <!-- Content of Div 2 -->
+        <div class="container4" style="padding-top:50px;">
+            <div class="row">
+                <div class="content2 col-md-6 col-12">
+                    <div class="title">
+                        <h2 class="fw-bold">MISSION</h2>
+                    </div>
+                    <div class="" style="padding-bottom:40px;">
+                        <ul style="font-weight:500">
+                            <li>Customer satiscation</li>
+                            <li>Develop teams with well-nourished culture based familial values galvanized by training
+                                to
+                                promote the efficiency and effectiveness.</li>
+                            <li>The harnessing and sharing of opportunities for mutual benefit to forge a bright and
+                                vibrant
+                                lifetime career for everyone based on empathy and mutual respect.</li>
+                        </ul>
+                    </div>
+                    <div class="title">
+                        <h2 class="fw-bold">VISION</h2>
+                    </div>
+                    <div class="content2vision">
+                        <p class="content2visionp" style="font-weight:500; padding-left:20px; ">"A one-stop robust,
+                            reliable and dynamic company that will ensure the satisfaction of its
+                            clientele’s
+                            real estate needs, the realization of their dreams and the solution to the challenges they
+                            face."
+                        </p>
+                    </div>
+                </div>
+                <div class="content3 col-6 col-md-6 col-12">
+                    <div class="container4" style="display: inline;">
+                        <div>
+                            <h1 class="fw-bold" style="display: inline;">P</h1>
+                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Harum, inventore.</div>
+                        </div>
+                        <div>
+                            <h1 class="fw-bold" style="display: inline;">P</h1>
+                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Harum, inventore.</div>
+                        </div>
+                        <div>
+                            <h1 class="fw-bold" style="display: inline;">I</h1>
+                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Harum, inventore.</div>
+                        </div>
+                        <div>
+                            <h1 class="fw-bold" style="display: inline;">C</h1>
+                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Harum, inventore.</div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div id="Footer">
+        </div>
+    </footer>
+
+    <script>
+        function showDiv(divId, clickedBtn) {
+            var btns = document.querySelectorAll('.btn');
+            var targetDivId = clickedBtn.getAttribute('data-div');
+            var targetDiv = document.getElementById(targetDivId);
+
+            // Check if the target div exists
+            if (targetDiv) {
+                // Deactivate all buttons
+                btns.forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+                // Activate the clicked button
+                clickedBtn.classList.add('active');
+
+                // Toggle visibility of the corresponding div
+                var divs = document.querySelectorAll('.content');
+                divs.forEach(function (div) {
+                    div.classList.remove('active');
+                });
+                targetDiv.classList.add('active');
+            } else {
+                console.error('Div with ID ' + targetDivId + ' not found.');
+            }
+        }
+
+
+    </script>
+
+    <script src="js/app.js"> </script>
+
+</body>
+
+</html>
