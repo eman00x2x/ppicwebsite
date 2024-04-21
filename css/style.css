@@ -136,11 +136,7 @@ body {
         position: relative; /* Change to relative on mobile screens */
         top: 0; /* Reset the top position */
     }
-    #videoFrame
-    {
-        height: 400px;
-        width: 100%;
-    }
+
     .imageLg{
         display: none;
     }
@@ -180,7 +176,7 @@ body {
     {
         font-size: 108px;
     }
-    
+
 }
 
 
@@ -227,6 +223,39 @@ display: none;
 
   }
 
+  .videoModal 
+  {
+    display: none;
+    position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.712);
+    align-items: center;
+    
+
+  }
+  .videoFrame
+  {
+    
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    top: 25%;
+    overflow: auto;
+    width: 50%;
+    height: 400px;
+    
+
+  }
+  .video-thumb
+  {
+    padding-bottom: 20px;
+  }
+
   @media (max-width: 575.98px) {
     .card-title {
       font-size: 18px;
@@ -249,4 +278,14 @@ display: none;
     {
       display: block;
     }
+
+    .videoFrame
+    {
+        width: 100%;
+        height:400px;
+        left: 0;
+        padding: 10px;
+    }
+
+    
   }
