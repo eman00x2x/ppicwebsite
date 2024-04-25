@@ -56,19 +56,47 @@ body {
     font-family: "Montserrat", sans-serif;
 
 }
+
+
+
 #getImg
 {
     margin-bottom: -80px;
+}
+
+.filter{
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 .morefilter
 {
     display: none;
 }
+.prop-container
+{
+    z-index: 1;
+}
+.showFilterSm{
+    display: none;
+}
+.showFilterBtn{
+    position:fixed;
+	bottom:40px;
+    right: 40px;
+	color:#FFF;
+	text-align:center;
+    z-index: 2; 
 
-/* .modalCaro
+
+}
+
+
+.imgSm
 {
     display: none;
-} */
+}
 
 
 @media (max-width: 575.98px) {
@@ -132,13 +160,16 @@ body {
     {
         width: 10px;
     }
-    .filter {
+    .filterBg {
         position: relative; /* Change to relative on mobile screens */
         top: 0; /* Reset the top position */
     }
 
     .imageLg{
         display: none;
+    }
+    .imgSm{
+        display: block;
     }
     .contactUs
     {
