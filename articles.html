@@ -37,61 +37,63 @@
 
     <section>
         <div class="container-fluid container1">
-            <div class="breadcrumbs">
-                <p>HOME/ARTICLES</p>
-            </div>
-            <div class="header">
-                <h1 class="fw-bold">ARTICLES</h1>
-                <p class="header3">Informative articles about real estate and be a successful realtor and entrepreneur.
-                </p>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <p><a href="index.html" style="color:white;">HOME</a>/ARTICLES</p>
+                </div>
+                <div class="header">
+                    <h1 class="fw-bold">ARTICLES</h1>
+                    <p class="header3">Informative articles about real estate and be a successful realtor and entrepreneur.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="tabs">
-            <!-- Regular tabs for small and larger screens -->
-            <ul class="nav nav-underline d-none d-sm-flex">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">All</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Property Management</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Brokerage</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Listing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Distressed Assets</a>
-                </li>
-            </ul>
-
-            <div class="dropdown d-block d-sm-none">
-                <button class="btn btn-secondary dropdown-toggle dropdown-toggle-end" type="button"
-                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    All <!-- Default option text -->
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                    <!-- List items for tab links -->
-                    <li><a class="dropdown-item" href="#" onclick="updateDropdownText('All')">All</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="updateDropdownText('Property Management')">Property
-                            Management</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="updateDropdownText('Brokerage')">Brokerage</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="updateDropdownText('Listing')">Listing</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="updateDropdownText('Distressed Assets')">Distressed
-                            Assets</a></li>
+ 
+        <div class="container">
+            <div class="tabs">
+                <!-- Regular tabs for small and larger screens -->
+                <ul class="nav nav-underline d-none d-sm-flex">
+                    <li class="nav-item">
+                        <a class="nav-link choice active" aria-current="page" href="#">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link choice " href="#">Property Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link choice " href="#">Brokerage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link choice " href="#">Listing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link choice " href="#">Distressed Assets</a>
+                    </li>
                 </ul>
+    
+                <div class="dropdown d-block d-sm-none">
+                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-end" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        All <!-- Default option text -->
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <!-- List items for tab links -->
+                        <li><a class="dropdown-item choice " href="#" onclick="updateDropdownText('All')">All</a></li>
+                        <li><a class="dropdown-item choice " href="#" onclick="updateDropdownText('Property Management')">Property Management</a></li>
+                        <li><a class="dropdown-item choice " href="#" onclick="updateDropdownText('Brokerage')">Brokerage</a></li>
+                        <li><a class="dropdown-item choice " href="#" onclick="updateDropdownText('Listing')">Listing</a></li>
+                        <li><a class="dropdown-item choice " href="#" onclick="updateDropdownText('Distressed Assets')">Distressed Assets</a></li>
+                    </ul>
+                </div>
+    
             </div>
-
+            <div class="articles"></div>
         </div>
-        <div class="container"></div>
-
-
-
-
-
 
     </section>
+    
+    <footer>
+        <div id="Footer">
+        </div>
     <script src="/js/app.js"> </script>
     <script src="/js/articles.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

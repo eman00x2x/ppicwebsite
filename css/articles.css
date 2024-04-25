@@ -7,7 +7,7 @@ body {
     /* position:absolute; */
     margin-top:3rem;
     font-size:14px;
-    margin-left:100px
+    margin-left:40px
 
 }
 .header3 {
@@ -33,7 +33,7 @@ body {
 }
 
 .header {
-    margin: auto 100px;
+    margin: auto 40px;
 }
 .tabs .nav-link {
     color: #000000 !important; /* Text color */
@@ -48,8 +48,8 @@ body {
     border-bottom-color: #131C39 !important; /* Pink underline for active link */
 }
 .tabs{
-    margin-left:115px;
     margin-top:2rem;
+    margin-left:44px;
 }
 
 
@@ -60,7 +60,6 @@ body {
      /* Set text color */
 }
 .container{
-    margin:0 98px;
 }
 .article-img {
     width: 100%;
@@ -114,15 +113,15 @@ body {
     height: 200px; /* Adjust the height as needed */
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
+.articles{
+    margin-left:20px;
+}
 
 
 
 @media only screen and (max-width: 991px) {
     .container1 {
-        color: white;
-        background-color: #131C39;
         height: 10rem;
-        display: flex;
     }
 
     .container1 h1 {
@@ -135,15 +134,28 @@ body {
         margin-top:1rem;
         font-size:12px;
     }
-    .articles{
-        margin:0 98px;
+    .article-details h3{
+        margin: 0;
+        font-size: 1rem;
     }
+    .article-details p{
+        margin: 0;
+        font-size: 0.5rem;
+    }
+
 
 
    
 }
 
 @media only screen and (max-width: 590px) {
+    .container{
+        display:flex;
+        flex-direction:column;
+    }
+    .tabs {
+        align-self: flex-end; /* Aligns only the tabs to the right */
+    }
     .container1 {
         color: white;
         background-color: #131C39;
@@ -166,19 +178,12 @@ body {
         font-size:8px;
         margin-left: 11px;
     }
-    .tabs{
-        float:right;
-        padding-right:5%;
-    }
+
     .row{
         padding:0;
     }
     .articles{
-        margin:5rem 0;
-        margin-left: 7%;
-    }
-    .col-lg-8 {
-        padding: 0 !important; /* Remove padding */
+        margin-top:2rem;
     }
     .overlay-box {
         position: absolute;
@@ -201,7 +206,10 @@ body {
     }
     .article-details h3{
         margin: 0;
-        font-size: 12px;
+        font-size: 10px;
+    }
+    .card{
+        height:250px !important;
     }
 
 }

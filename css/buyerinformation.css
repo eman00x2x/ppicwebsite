@@ -190,9 +190,22 @@ h2 {
 .modal-open body {
     overflow: hidden;
 }
+.invalid-input {
+    border: 0.1px solid red; /* Example: Red border for invalid inputs */
+}
+.radio-instruction {
+    display:none;
+}
+
+.error-label {
+    color: red; /* Change color to indicate error */
+    margin-bottom: 5px; /* Adjust margin as needed */
+    display:block;
+}
+
   
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
     .heading{
         margin-bottom:3rem;
     }
@@ -268,7 +281,7 @@ h2 {
         width: 50%;
     }
     .modal-content {
-        margin-top:10rem;
+        margin-top:10%;
         padding: 20px;
     }
 
@@ -314,7 +327,7 @@ h2 {
         width: 10%;
     }
     .modal-content {
-        margin-top: 10rem;
+        margin-top: 30%;
         padding: 10px;
         max-width: 280px;
 
