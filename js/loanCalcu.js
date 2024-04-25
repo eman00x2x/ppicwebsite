@@ -21,7 +21,7 @@ function calculatePayment() {
 
     var mortgagePayment = principal * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
 
-    document.getElementById('monthly-payment').innerText = mortgagePayment.toFixed(2);
+    document.getElementById('monthly-payment').innerText = '₱ ' + mortgagePayment.toFixed(2);
 }
 
 function updateResult() {

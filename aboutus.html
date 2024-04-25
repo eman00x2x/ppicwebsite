@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="icon" type="image/png" href="./assets/logo.jpg">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,9 +31,6 @@
             padding-top: 50px
         }
 
-        h1 {
-            font-size: 60px;
-        }
 
         .hidden {
             display: none;
@@ -43,10 +40,10 @@
             background-color: rgba(19, 28, 57, 0.2);
             border-radius: 20px;
             color: white;
-            width: 250px;
-            font-size: 22px;
+            width: 240px;
+            font-size: 20px;
             margin-right: 10px;
-            height: 55px;
+            height: 50px;
             font-weight: bold;
 
         }
@@ -56,7 +53,7 @@
             border-radius: 20px;
             color: white;
             width: 250px;
-            font-size: 22px;
+            font-size: 20px;
             margin-right: 10px;
             height: 55px;
             font-weight: bold;
@@ -80,21 +77,28 @@
 
         .aboutp {
             padding-left: 135px;
+            padding-right:0;
             font-weight: 500;
+            text-align: justify;
+            text-justify: inter-word;
+            font-size:12px;
         }
 
         .video-container {
-            padding-left: 100px;
-            width: 800px;
-            height: 350px;
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio (height: 9/16 * 100%) */
+            margin-left:5%;
+            margin-right:10%;
         }
 
-        .video {
-            width: 100%;
-            height: 350px;
-
+        .video-container .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 90%;
         }
-
         .content2 {
             padding-left: 130px;
             padding-right: 30px;
@@ -109,6 +113,9 @@
         .content3 {
             padding-left: 120px;
             padding-bottom: 60px;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-evenly;
         }
 
 
@@ -294,13 +301,13 @@
     <div id="div2" class="content">
         <!-- Content of Div 2 -->
         <div class="container4" style="padding-top:50px;">
-            <div class="row">
+            <div class="row w-100">
                 <div class="content2 col-md-6 col-12">
                     <div class="title">
                         <h2 class="fw-bold">MISSION</h2>
                     </div>
                     <div class="" style="padding-bottom:40px;">
-                        <ul style="font-weight:500">
+                        <ul style="font-weight:500; text-align: justify;text-justify: inter-word;">
                             <li>Customer satiscation</li>
                             <li>Develop teams with well-nourished culture based familial values galvanized by training
                                 to
@@ -314,7 +321,7 @@
                         <h2 class="fw-bold">VISION</h2>
                     </div>
                     <div class="content2vision">
-                        <p class="content2visionp" style="font-weight:500; padding-left:20px; ">"A one-stop robust,
+                        <p class="content2visionp" style="font-weight:500; padding-left:20px; text-align: justify;text-justify: inter-word; ">"A one-stop robust,
                             reliable and dynamic company that will ensure the satisfaction of its
                             clientele’s
                             real estate needs, the realization of their dreams and the solution to the challenges they
@@ -322,32 +329,23 @@
                         </p>
                     </div>
                 </div>
-                <div class="content3 col-6 col-md-6 col-12">
-                    <div class="container4" style="display: inline;">
-                        <div>
-                            <h1 class="fw-bold" style="display: inline;">P</h1>
-                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Harum, inventore.</div>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold" style="display: inline;">P</h1>
-                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Harum, inventore.</div>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold" style="display: inline;">I</h1>
-                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Harum, inventore.</div>
-                        </div>
-                        <div>
-                            <h1 class="fw-bold" style="display: inline;">C</h1>
-                            <div style="display: inline; font-weight:500;">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Harum, inventore.</div>
-                        </div>
-
-
+                <div class="content3 col-6 col-md-6 col-12" >
+                    <div>
+                        <h1 class="fw-bold" style="display: inline; font-size:60px">P</h1>
+                        <div style="display: inline; font-weight:500; font-size:30px">rofessionalism</div>
                     </div>
-
+                    <div>
+                        <h1 class="fw-bold" style="display: inline; font-size:60px">P</h1>
+                        <div style="display: inline; font-size:30px; font-weight:500;">roductivity</div>
+                    </div>
+                    <div>
+                        <h1 class="fw-bold" style="display: inline; font-size:60px">I</h1>
+                        <div style="display: inline; font-size:30px; font-weight:500;">ntegrity</div>
+                    </div>
+                    <div>
+                        <h1 class="fw-bold" style="display: inline; font-size:60px">C</h1>
+                        <div style="display: inline; font-size:30px; font-weight:500;">ommitment</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -389,6 +387,8 @@
     </script>
 
     <script src="js/app.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

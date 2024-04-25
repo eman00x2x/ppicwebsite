@@ -1,6 +1,7 @@
 
 
 $(document).ready(function () {
+    
     const JsonVideo = 'json/VideoProperty.json'
 
     fetch(JsonVideo)

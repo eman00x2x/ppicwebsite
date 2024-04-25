@@ -1,0 +1,105 @@
+.container1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Adjust the max-width as needed */
+    padding: 0 20px; /* Add padding if necessary */
+}
+.breadcrumbs{
+    margin-top:3.5rem;
+    margin-bottom:1rem;
+    font-size:12px;
+    text-align: left;
+}
+.b{
+    text-decoration:none;
+    color:black;
+}
+#article-title{
+    font-weight:bold;
+}
+.hr1 {
+    border: none; /* Remove default border */
+    height: 1px; /* Set height of the <hr> */
+    background-color: #000; /* Set background color of the <hr> */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Add drop shadow */
+}
+#article-summary{
+    font-size:0.9rem;
+}
+#article-image{
+    width:100%;
+    margin-bottom:2rem;
+}
+#article-content{
+    font-size:1rem;
+    text-align: justify;
+    margin-bottom:7rem;
+}
+
+
+
+/* Media query for tablets (landscape and portrait) */
+@media (max-width: 960px) {
+    .container1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .breadcrumbs{
+        margin-top:2rem;
+    }
+    #article-title{
+        font-size:24px;
+    }
+    #article-date{
+        font-size:0.8rem;
+        margin:0;
+    }
+    #research-by{
+        font-size:0.9rem;
+        margin-top:0;
+        margin-bottom:0.3rem;
+    }
+    #article-summary{
+        font-size:0.7rem;
+    }
+    #article-content{
+        font-size:0.7rem;
+    }
+    #article-content h3{
+        font-size:1.2rem;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 568px) {
+    .container1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .breadcrumbs{
+        font-size:10px;
+    }
+    #article-title{
+        font-size:18px;
+    }
+    #article-date{
+        font-size:0.7rem;
+        margin:0;
+    }
+    #research-by{
+        font-size:0.7rem;
+        margin-top:0;
+        margin-bottom:0.3rem;
+    }
+
+    #article-content{
+        font-size:0.6rem;
+        text-align: left;
+    }
+    #article-content h1{
+        font-size:1rem;
+    }
+}
+
